@@ -1,0 +1,139 @@
+.navbar {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  width: auto;
+  min-width: 50%;
+  max-width: 90%;
+
+  /* --- The 3D Glass Surface --- */
+  /* 1. Gradient*/
+  background: linear-gradient(
+    130deg,
+    rgba(40, 40, 40, 0.7) 0%,
+    rgba(10, 10, 10, 0.9) 100%
+  );
+
+  /* 2. Blur: The frosted effect */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  /* --- 3D Borders & Highlights --- */
+  border-radius: 50px;
+
+  /* We use a specific border color, but the 'real' 3D effect comes from shadows below */
+  border: 1px solid rgba(40, 40, 40, 0.7);
+
+  /* The 3D Magic (Layers of Shadows) */
+  box-shadow: 
+        /* Layer 1: Sharp White Top Highlight (Rim Light) */
+    inset 0 1px 0px rgba(255, 255, 255, 0.25),
+    /* Layer 2: Soft White Inner Glow (Top half) */ inset 0 20px 30px
+      rgba(255, 255, 255, 0.03),
+    /* Layer 3: Dark Bottom Inner Shadow (Curvature) */ inset 0 -3px 10px
+      rgba(0, 0, 0, 0.6),
+    /* Layer 4: Deep Drop Shadow (Elevation off the page) */ 0 15px 35px
+      rgba(0, 0, 0, 0.4),
+    0 5px 15px rgba(0, 0, 0, 0.2);
+
+  /* Text & Font */
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #fff; /* Assuming white text for dark navbar */
+
+  /* Smooth Animation */
+  transition:
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.3s ease;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Logo Styling */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+.logo-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  background: linear-gradient(135deg, #fff, #a1a1aa);
+  /* Gradient icon */
+  border-radius: 4px;
+}
+
+.logo-text {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: white;
+}
+
+/* Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+/* --- THE "SOFT 3D" BUTTON (Matches your Image) --- */
+.btn-login {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+
+  /* The Dark Body */
+  background-color: #272727;
+  padding: 0.75rem 1.75rem;
+  /* Generous padding for pill shape */
+  border-radius: 9999px;
+  /* Full pill shape */
+
+  /* THE MAGICAL 3D LIGHTING */
+  box-shadow:
+        /* 1. Top Rim Light (The white highlight on top) */
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    /* 2. Subtle gradient effect (optional, softens the black) */ inset 0 10px
+      20px rgba(255, 255, 255, 0.05),
+    /* 3. Soft Drop Shadow */ 0 4px 12px rgba(0, 0, 0, 0.3);
+
+  /* Smooth transition */
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* Tiny border to define edges */
+}
+
+/* Hover State - Slightly lighter/lifted */
+.btn-login:hover {
+  background-color: #393939;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 10px 20px rgba(255, 255, 255, 0.08),
+    0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Active State - Pressed In */
+.btn-login:active {
+  transform: translateY(1px) scale(0.98);
+  /* Shrink slightly */
+  background-color: #000;
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    /* Inner shadow to look pressed */ 0 2px 4px rgba(0, 0, 0, 0.2);
+}

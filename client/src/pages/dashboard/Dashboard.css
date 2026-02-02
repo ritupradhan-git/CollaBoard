@@ -1,0 +1,283 @@
+/* Note: Ensure the :root variables provided in your prompt are in your index.css or at the top of this file */
+
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+}
+
+/* --- Left Sidebar --- */
+.sidebar {
+  width: 80px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.logo-container {
+  width: 44px;
+  height: 44px;
+  background: var(--surface-1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid var(--border-strong);
+  margin-bottom: 60px;
+  transition: all 0.2s ease;
+}
+
+.logo-container:hover {
+  background: var(--surface-2);
+  transform: translateY(-1px);
+}
+
+.nav-stack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-item {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: var(--accent-primary-soft);
+  color: var(--accent-primary);
+}
+
+/* --- Main Content Area --- */
+.main-content {
+  flex: 1;
+  padding: 40px 60px;
+  /* Simulation of the 12-column grid from wireframe */
+  background-image: linear-gradient(
+    to right,
+    var(--surface-glass) 1px,
+    transparent 1px
+  );
+  background-size: calc((100% - 120px) / 12) 100%;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.user-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+}
+
+.user-meta h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+.user-meta p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.date-chip {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* --- Content Title & Controls --- */
+.page-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.page-intro h1 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  margin: 4px 0 0 0;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.actions-group {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.view-switcher {
+  background: var(--bg-tertiary);
+  padding: 4px;
+  border-radius: 8px;
+  display: flex;
+}
+
+.view-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.view-btn.active {
+  background: var(--surface-2);
+  color: var(--text-primary);
+}
+
+.btn-primary {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+/* --- Grid System --- */
+.projects-container {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.projects-container.list {
+  grid-template-columns: 1fr;
+}
+
+.project-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-soft);
+}
+
+.card-preview {
+  height: 140px;
+  background: var(--surface-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-footer {
+  padding: 16px;
+  background: var(--bg-tertiary);
+}
+
+.card-footer h3 {
+  font-size: 14px;
+  margin: 0 0 4px 0;
+}
+.card-footer p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.create-card {
+  border: 2px dashed var(--border-strong);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+}
+
+.create-card:hover {
+  border-color: var(--accent-primary);
+  background: var(--accent-primary-soft);
+}
+
+/* --- Modals & Overlays --- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-strong);
+  padding: 32px;
+  border-radius: 16px;
+  width: 400px;
+  box-shadow: var(--glow-accent);
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: var(--surface-1);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  width: 180px;
+  padding: 8px;
+  z-index: 100;
+  box-shadow: var(--shadow-soft);
+}

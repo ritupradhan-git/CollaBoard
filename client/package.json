@@ -1,0 +1,26 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "prettier": "^3.7.4",
+    "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "fabric": "^7.1.0",
+    "lucide-react": "^0.562.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.11.0",
+    "zustand": "^5.0.9"
+  }
+}

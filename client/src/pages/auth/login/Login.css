@@ -1,0 +1,222 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #050505;
+  --bg-secondary: #111113;
+  --surface-1: #1a1a1c;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-blue: #3b82f6;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --gradient-accent: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+}
+
+.auth-container {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+  /* Grid Background */
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+}
+
+/* Navigation Bar */
+.top-nav {
+  position: absolute;
+  top: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 100px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.logo-icon {
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 4px;
+}
+
+.nav-btn-outline {
+  background: #222;
+  border: 1px solid var(--border-subtle);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Card */
+.auth-card {
+  width: 100%;
+  max-width: 320px; /* Compact width */
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.card-header h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.2rem;
+  color: var(--text-primary);
+}
+
+.card-header p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Google Button */
+.btn-google {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: white;
+  color: black;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.btn-google img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 0.8rem;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.forgot-link {
+  font-size: 0.7rem;
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.85rem;
+  box-sizing: border-box;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.7rem;
+  background: var(--gradient-accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-subtle);
+}
+.divider span {
+  padding: 0 0.75rem;
+}
+
+/* Footer */
+.auth-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 1.2rem;
+}
+
+.link-primary {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 600;
+}

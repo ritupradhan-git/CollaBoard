@@ -1,0 +1,43 @@
+:root {
+  --font-ui: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  /* Backgrounds */
+  --bg-primary: rgb(10, 10, 12); /* App background */
+  --bg-secondary: rgb(16, 16, 20); /* Sections */
+  --bg-tertiary: rgb(22, 22, 28); /* Inner panels */
+
+  /* Surfaces */
+  --surface-1: rgb(28, 28, 34); /* Cards */
+  --surface-2: rgb(34, 34, 40); /* Modals / hover */
+  --surface-glass: rgba(255, 255, 255, 0.03);
+
+  /* Borders */
+  --border-subtle: rgb(38, 38, 45);
+  --border-strong: rgb(52, 52, 60);
+
+  /* Typography */
+  --text-primary: rgb(245, 245, 247); /* Headings */
+  --text-secondary: rgb(170, 170, 180); /* Body text */
+  --text-muted: rgb(120, 120, 135); /* Labels */
+
+  /* Accent Colors */
+  --accent-primary: rgb(124, 58, 237); /* Purple */
+  --accent-primary-soft: rgba(124, 58, 237, 0.15);
+
+  --accent-blue: rgb(56, 189, 248);
+  --accent-blue-soft: rgba(56, 189, 248, 0.15);
+
+  --accent-green: rgb(34, 197, 94);
+  --accent-red: rgb(239, 68, 68);
+
+  /* Gradients */
+  --gradient-accent: linear-gradient(
+    135deg,
+    rgb(124, 58, 237),
+    rgb(56, 189, 248)
+  );
+
+  /* Shadows & Glow */
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --glow-accent: 0 0 32px rgba(124, 58, 237, 0.35);
+}
